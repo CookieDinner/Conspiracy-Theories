@@ -1,6 +1,9 @@
 #Intellij Idea
 .idea
 
+#Target folder
+target/
+
 # Compiled class file
 *.class
 
