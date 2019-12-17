@@ -1,16 +1,80 @@
 package com.drools.conspiracies;
 
-import java.util.ArrayList;
-
 public class AvailableAnswers {
-    private ArrayList<String> available_answers = new ArrayList<>();
 
-    public AvailableAnswers(){
-        available_answers.add("Yes, they're up to something alright, I just know it.");
-        available_answers.add("They say not.");
-    }
-
-    public String getAvailableAnswer(int i) {
-        return available_answers.get(i);
-    }
+    public String[] availableAnswers={
+            "Yes, they're up to something alright, I just know it.",
+            "They say not.",
+            "Think again",
+            "Big Pharma",
+            "Aliens",
+            "THEM",
+            "Actually, now you come to mention it, she kind of does a bit",
+            "Don't be silly, she just has a very large selection of nice green frocks with matching hats",
+            "No man, I'm talking about some really scary secret underground shit",
+            "Exactly, but with a sort of sinister shadowy hand on the global tiller",
+            "I suppose so",
+            "Certainly not",
+            "No, I mean the people who ACTUALLY rule the world",
+            "Roundhead",
+            "Cavalier",
+            "Definitely",
+            "Not sure",
+            "Yeah, those sneaky bastards are up to something",
+            "Cows",
+            "A Credulous Hick",
+            "The Chosen One",
+            "The U.S. Army",
+            "The Nazis",
+            "Ancient civilisations",
+            "No one",
+            "A bit",
+            "Yep. Pretty impressive eh?",
+            "No, but she has written a very silly book",
+            "No, they're all nice and shiny and zip about the place",
+            "No",
+            "Yes",
+            "There are some superficial similarities yes",
+            "Yes, a little grey bugger",
+            "Yes, a little grey bugger, but we cut him up",
+            "Mars",
+            "Earth",
+            "They use evil toxins",
+            "Sweeteners",
+            "Won't somebody think of the children",
+            "Doctors tell you a crock of shit",
+            "Infomercials",
+            "The Daily Mail",
+            "Glossy Magazines",
+            "Well, you can cure cancer with a large glass of carrot juice and a cup of coffee up your jacksie every day. Even Prince Charles knows that",
+            "You can cure all known diseases by simply not cooking your food",
+            "AIDS isn't caused by HIV and can be cured with beetroot and garlic",
+            "They're trying to cover up natural remedies",
+            "They're making up diseases to sell us more drugs",
+            "Pay attention",
+            "Pay attention and calm down",
+            "They're trying to wipe us out alright. No question",
+            "They're killing us all the time and blaming it on someone else so we don't get suspicious, but I'm on them",
+            "The Muslims",
+            "The Libyans",
+            "The Kids",
+            "Poison",
+            "The Water",
+            "The Air",
+            "The Food",
+            "No, they're just fucking with stuff and not telling us about it, but I know what they're up to. They don't fool me",
+            "The President",
+            "Obama",
+            "Kennedy",
+            "Clinton",
+            "The Weather",
+            "They're making shit up and telling it to us to frighten us",
+            "They're doing frightening shit and not telling us",
+            "Secret Weapons",
+            "Quite possibly",
+            "Very unlikely",
+            "Our Minds",
+            "Yes",
+            "No, it's just filming that pretend astronaut over there"
+    };
 }
