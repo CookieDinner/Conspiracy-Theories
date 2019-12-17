@@ -6,19 +6,24 @@ import javax.swing.JOptionPane
         answer : String
     end
 
-    //p - question number
     function Answer checkForAnswer(int p, String question, String answer1, String answer2){
         Answer answer = new Answer();
         answer.setQuestion(question);
+        Object[] formatedOptions = {
+        "<html><body><p style='width: 150px;'>"+answer1+"</p></body></html>",
+        "<html><body><p style='width: 150px;'>"+answer2+"</p></body></html>"};
         Object[] options = {answer1, answer2};
 
+        System.out.println(question);
+
+        //first null - Parent Frame
         int n = JOptionPane.showOptionDialog(null,
             question,
             "Question"+p,
             JOptionPane.DEFAULT_OPTION,
             JOptionPane.QUESTION_MESSAGE,
             null,
-            options,
+            formatedOptions,
             null);
 
         if (n == 0) {
@@ -38,15 +43,48 @@ import javax.swing.JOptionPane
         return answer;
     }
 
+        function Answer youReWrong(int p, String question, String answer1){
+            Answer answer = new Answer();
+            answer.setQuestion(question);
+            Object[] options = {answer1};
+
+            System.out.println(question);
+
+            //first null - Parent Frame
+            int n = JOptionPane.showOptionDialog(null,
+                question,
+                "Question"+p,
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                null);
+
+            if (n == 0) {
+                System.out.println(options[0]);
+                answer.setAnswer(""+options[0]);
+
+            }
+            else {
+                System.out.println("You choose to ignore the truth, huh?");
+                return null;
+                }
+
+            return answer;
+        }
+
     rule "Ignition"
     when
+        Starter()
+        or
+        Answer(question == "Well of course THEY would say that wouldn't THEY", answer == "Think again")
     then
         insert(checkForAnswer(1, "Are the bastards out to get you?", "They say not", "Yes, they're up to something alright, I just know it."));
     end
 
     rule "Question1"
     when
-        answerQuestion : Answer(question == "Are the bastards out to get you?", answer == "Yes, they're up to something alright, I just know it.")
+        Answer(question == "Are the bastards out to get you?", answer == "Yes, they're up to something alright, I just know it.")
     then
         System.out.println("good boy");
     end
@@ -55,6 +93,5 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Are the bastards out to get you?", answer == "They say not")
     then
-        System.out.println("fuck");
+        insert(youReWrong(2, "Well of course THEY would say that wouldn't THEY", "Think again"));
     end
-
