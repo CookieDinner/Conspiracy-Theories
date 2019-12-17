@@ -1,28 +1,59 @@
 package com.drools.conspiracies;
+import javax.swing.JPanel
+import javax.swing.JLabel
+import javax.swing.ButtonGroup
+import javax.swing.JButton
+import javax.swing.JOptionPane
+import java.awt.event.ActionListener
+import java.awt.event.ActionEvent
+
+    declare Question
+        question : String
+    end
+
+    declare Answer
+        question : Question
+        answer : String
+    end
 
     rule "Ignition"
     when
-        Starter()
     then
-        System.out.print("Hello from space! \nAdding all questions!\n");
-        AvailableQuestions availableQuestions = new AvailableQuestions();
-        insert(new Question(availableQuestions.getAvailableQuestion(0)));
-        insert(new Question(availableQuestions.getAvailableQuestion(1)));
+        JPanel jPanel = new JPanel();
+        jPanel.add(new JLabel("Are the bastards out to get you?"));
+        ButtonGroup group = new ButtonGroup();
+        JButton butYes = new JButton("Yes, they're up to something alright, I just know it.");
+        JButton butNo = new JButton("They say not");
+        Answer answer = new Answer();
+        Question quest = new Question();
+        quest.setQuestion("Are the bastards out to get you?");
+        answer.setQuestion(quest);
+        butNo.addActionListener(new ActionListener(){@Override public void actionPerformed(ActionEvent e) {
+            answer.setAnswer("They say not");
+    }});
+        butYes.addActionListener(new ActionListener(){@Override public void actionPerformed(ActionEvent e) {
+                    answer.setAnswer("Yes, they're up to something alright, I just know it.");
+            }});
+        group.add(butNo);
+        group.add(butYes);
+        jPanel.add(butNo);
+        jPanel.add(butYes);
+
+        insert(answer);
+        JOptionPane.showMessageDialog(null, jPanel);
+
     end
 
     rule "Question1"
     when
-        question : Question(question == "Are the bastards out to get you?")
+        answerQuestion : Answer(question.question == "Are the bastards out to get you?", answer == "Yes, they're up to something alright, I just know it.")
     then
-        System.out.println(question.getQuestion());
-        System.out.println("Yes, they're up to something alright, I just know it.");
-        insert(new Answer(question, "Yes, they're up to something alright, I just know it."));
+        System.out.println(answerQuestion.getAnswer());
     end
 
     rule "Question2"
     when
-        exists Answer (question.question == "Are the bastards out to get you?", answer == "Yes, they're up to something alright, I just know it.")
-        question : Question(question == "Who do you suppose THEY are?")
+        answerQuestion : Answer(question.question == "Are the bastards out to get you?", answer == "They say not")
     then
-        System.out.println(question.getQuestion());
+        System.out.println(answerQuestion.getAnswer());
     end

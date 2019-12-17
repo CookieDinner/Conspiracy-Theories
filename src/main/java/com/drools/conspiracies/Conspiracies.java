@@ -20,7 +20,6 @@ public class Conspiracies {
         KieContainer kContainer = ks.getKieClasspathContainer();
         KieSession session = kContainer.newKieSession("ksession-rules");
 
-        session.insert(new Starter());
         session.fireAllRules();
     }
 }
