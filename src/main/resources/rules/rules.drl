@@ -1,59 +1,60 @@
 package com.drools.conspiracies;
-import javax.swing.JPanel
-import javax.swing.JLabel
-import javax.swing.ButtonGroup
-import javax.swing.JButton
 import javax.swing.JOptionPane
-import java.awt.event.ActionListener
-import java.awt.event.ActionEvent
-
-    declare Question
-        question : String
-    end
 
     declare Answer
-        question : Question
+        question : String
         answer : String
     end
+
+    //p - question number
+    function Answer checkForAnswer(int p, String question, String answer1, String answer2){
+        Answer answer = new Answer();
+        answer.setQuestion(question);
+        Object[] options = {answer1, answer2};
+
+        int n = JOptionPane.showOptionDialog(null,
+            question,
+            "Question"+p,
+            JOptionPane.DEFAULT_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+            null,
+            options,
+            null);
+
+        if (n == 0) {
+            System.out.println(options[0]);
+            answer.setAnswer(""+options[0]);
+
+        }
+        else if (n == 1) {
+            System.out.println(options[1]);
+            answer.setAnswer(""+options[1]);
+        }
+        else {
+            System.out.println("You choose to ignore the truth, huh?");
+            return null;
+            }
+
+        return answer;
+    }
 
     rule "Ignition"
     when
     then
-        JPanel jPanel = new JPanel();
-        jPanel.add(new JLabel("Are the bastards out to get you?"));
-        ButtonGroup group = new ButtonGroup();
-        JButton butYes = new JButton("Yes, they're up to something alright, I just know it.");
-        JButton butNo = new JButton("They say not");
-        Answer answer = new Answer();
-        Question quest = new Question();
-        quest.setQuestion("Are the bastards out to get you?");
-        answer.setQuestion(quest);
-        butNo.addActionListener(new ActionListener(){@Override public void actionPerformed(ActionEvent e) {
-            answer.setAnswer("They say not");
-    }});
-        butYes.addActionListener(new ActionListener(){@Override public void actionPerformed(ActionEvent e) {
-                    answer.setAnswer("Yes, they're up to something alright, I just know it.");
-            }});
-        group.add(butNo);
-        group.add(butYes);
-        jPanel.add(butNo);
-        jPanel.add(butYes);
-
-        insert(answer);
-        JOptionPane.showMessageDialog(null, jPanel);
-
+        insert(checkForAnswer(1, "Are the bastards out to get you?", "They say not", "Yes, they're up to something alright, I just know it."));
     end
 
     rule "Question1"
     when
-        answerQuestion : Answer(question.question == "Are the bastards out to get you?", answer == "Yes, they're up to something alright, I just know it.")
+        answerQuestion : Answer(question == "Are the bastards out to get you?", answer == "Yes, they're up to something alright, I just know it.")
     then
-        System.out.println(answerQuestion.getAnswer());
+        System.out.println("good boy");
     end
 
     rule "Question2"
     when
-        answerQuestion : Answer(question.question == "Are the bastards out to get you?", answer == "They say not")
+        answerQuestion : Answer(question == "Are the bastards out to get you?", answer == "They say not")
     then
-        System.out.println(answerQuestion.getAnswer());
+        System.out.println("fuck");
     end
+
