@@ -19,7 +19,7 @@ public class Conspiracies {
         Logger.getLogger(Conspiracies.class).setLevel(Level.OFF);
         KieContainer kContainer = ks.getKieClasspathContainer();
         KieSession session = kContainer.newKieSession("ksession-rules");
-
+        session.insert(new Starter());
         session.fireAllRules();
     }
 }
