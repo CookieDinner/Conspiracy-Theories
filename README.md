@@ -3,7 +3,7 @@ An expert system project made with the help of JBoss Drools library.
 
 ## Creating jar
 ```bash
-mvn:package
+mvn package
 ```
 
 ## Rules
