@@ -6,17 +6,21 @@ import javax.swing.JOptionPane
         answer : String
     end
 
+    declare Result
+        nresult : String
+    end
+
     function Answer checkForAnswer7(int p, String question, String answer1, String answer2, String answer3, String answer4, String answer5, String answer6, String answer7){
                 Answer answer = new Answer();
                 answer.setQuestion(question);
                 Object[] formatedOptions = {
-                "<html><body><p style='width: 30px;'>"+answer1+"</p></body></html>",
-                "<html><body><p style='width: 30px;'>"+answer2+"</p></body></html>",
-                "<html><body><p style='width: 30px;'>"+answer3+"</p></body></html>",
-                "<html><body><p style='width: 30px;'>"+answer4+"</p></body></html>",
-                "<html><body><p style='width: 30px;'>"+answer5+"</p></body></html>",
-                "<html><body><p style='width: 30px;'>"+answer6+"</p></body></html>",
-                "<html><body><p style='width: 30px;'>"+answer7+"</p></body></html>"};
+                "<html><body><p style='width: 100px;'>"+answer1+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer2+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer3+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer4+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer5+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer6+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer7+"</p></body></html>"};
                 Object[] options = {answer1, answer2, answer3, answer4, answer5, answer6, answer7};
 
                 System.out.println(question);
@@ -24,7 +28,7 @@ import javax.swing.JOptionPane
                 //first null - Parent Frame
                 int n = JOptionPane.showOptionDialog(null,
                     question,
-                    "Question"+p,
+                    "Question "+p,
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null,
@@ -72,12 +76,12 @@ import javax.swing.JOptionPane
                 Answer answer = new Answer();
                 answer.setQuestion(question);
                 Object[] formatedOptions = {
-                "<html><body><p style='width: 50px;'>"+answer1+"</p></body></html>",
-                "<html><body><p style='width: 50px;'>"+answer2+"</p></body></html>",
-                "<html><body><p style='width: 50px;'>"+answer3+"</p></body></html>",
-                "<html><body><p style='width: 50px;'>"+answer4+"</p></body></html>",
-                "<html><body><p style='width: 50px;'>"+answer5+"</p></body></html>",
-                "<html><body><p style='width: 50px;'>"+answer6+"</p></body></html>"};
+                "<html><body><p style='width: 100px;'>"+answer1+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer2+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer3+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer4+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer5+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer6+"</p></body></html>"};
                 Object[] options = {answer1, answer2, answer3, answer4, answer5, answer6};
 
                 System.out.println(question);
@@ -85,7 +89,7 @@ import javax.swing.JOptionPane
                 //first null - Parent Frame
                 int n = JOptionPane.showOptionDialog(null,
                     question,
-                    "Question"+p,
+                    "Question "+p,
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null,
@@ -129,11 +133,11 @@ import javax.swing.JOptionPane
                 Answer answer = new Answer();
                 answer.setQuestion(question);
                 Object[] formatedOptions = {
-                "<html><body><p style='width: 80px;'>"+answer1+"</p></body></html>",
-                "<html><body><p style='width: 80px;'>"+answer2+"</p></body></html>",
-                "<html><body><p style='width: 80px;'>"+answer3+"</p></body></html>",
-                "<html><body><p style='width: 80px;'>"+answer4+"</p></body></html>",
-                "<html><body><p style='width: 80px;'>"+answer5+"</p></body></html>"};
+                "<html><body><p style='width: 100px;'>"+answer1+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer2+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer3+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer4+"</p></body></html>",
+                "<html><body><p style='width: 100px;'>"+answer5+"</p></body></html>"};
                 Object[] options = {answer1, answer2, answer3, answer4, answer5};
 
                 System.out.println(question);
@@ -141,7 +145,7 @@ import javax.swing.JOptionPane
                 //first null - Parent Frame
                 int n = JOptionPane.showOptionDialog(null,
                     question,
-                    "Question"+p,
+                    "Question "+p,
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null,
@@ -192,7 +196,7 @@ import javax.swing.JOptionPane
                 //first null - Parent Frame
                 int n = JOptionPane.showOptionDialog(null,
                     question,
-                    "Question"+p,
+                    "Question "+p,
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null,
@@ -238,7 +242,7 @@ import javax.swing.JOptionPane
                 //first null - Parent Frame
                 int n = JOptionPane.showOptionDialog(null,
                     question,
-                    "Question"+p,
+                    "Question "+p,
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null,
@@ -279,7 +283,7 @@ import javax.swing.JOptionPane
             //first null - Parent Frame
             int n = JOptionPane.showOptionDialog(null,
                 question,
-                "Question"+p,
+                "Question "+p,
                 JOptionPane.DEFAULT_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
                 null,
@@ -313,9 +317,9 @@ import javax.swing.JOptionPane
             //first null - Parent Frame
             int n = JOptionPane.showOptionDialog(null,
                 question,
-                "Question"+p,
+                "Question "+p,
                 JOptionPane.DEFAULT_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
+                JOptionPane.WARNING_MESSAGE,
                 null,
                 options,
                 null);
@@ -332,6 +336,26 @@ import javax.swing.JOptionPane
 
             return answer;
         }
+        function Result finalResult(String nresult){
+            Object[] options = {"Okay"};
+
+            Result result1 = new Result();
+            result1.setNresult(nresult);
+
+            System.out.println(nresult);
+
+            //first null - Parent Frame
+            JOptionPane.showOptionDialog(null,
+                nresult,
+                "Result",
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                options,
+                null);
+
+            return result1;
+        }
 
     rule "Ignition"
     when
@@ -344,7 +368,7 @@ import javax.swing.JOptionPane
 
     rule "Question1"
     when
-        Answer(question == "Are the bastards out to get you?", answer == "Yes, they're up to something alright, I just know it.")
+        answerQuestion : Answer(question == "Are the bastards out to get you?", answer == "Yes, they're up to something alright, I just know it.")
     then
         insert(checkForAnswer3(2, "Who do you suppose THEY are?", "Big Pharma", "Aliens", "THEM"));
     end
@@ -360,17 +384,9 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Who do you suppose THEY are?", answer == "Big Pharma")
     then
-        insert(checkForAnswer2(3, "Big pharma are evil because...", "They use evil toxins", "Doctors tell you a crock of shit"));
+        insert(checkForAnswer4(3, "Big Pharma are evil because...", "They use evil toxins", "Doctors tell you a crock of shit", "They're trying to cover up natural remedies", "They're making up diseases to sell us more drugs"));
     end
 
-    rule "Question4"
-    when
-        answerQuestion : Answer(question == "Big pharma are evil because...", answer == "They use evil toxins")
-    then
-//            insert(checkForAnswer(3, "Big pharma are evil because...", "They use toxins", "Doctors tell you a crock of shit"));
-    end
-
-//    KRZYSIU
     rule "Question5"
     when
         answerQuestion : Answer(question == "Who do you suppose THEY are?", answer == "THEM")
@@ -396,14 +412,14 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Sounds fun. Can I bring the wife?", answer == "I suppose so.")
     then
-        System.out.println("Bilderberg Group");
+        insert(finalResult("Bilderberg Group"));
     end
 
     rule "Question9"
     when
         answerQuestion : Answer(question == "Sounds fun. Can I bring the wife?", answer == "Certainly not.")
     then
-        System.out.println("Bohemian Grove");
+        insert(finalResult("Bohemian Grove"));
     end
 
     rule "Question10"
@@ -417,7 +433,7 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Roundheads or Cavaliers?", answer == "Roundhead.")
     then
-        System.out.println("The Protocol of the Elders of Zion");
+        insert(finalResult("The Protocol of the Elders of Zion"));
     end
 
     rule "Question12"
@@ -431,14 +447,14 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Do you suppose they are attempting to hasten the return of antichrist", answer == "Definitely")
     then
-        System.out.println("The Illuminati");
+        insert(finalResult("The Illuminati"));
     end
 
     rule "Question14"
     when
         answerQuestion : Answer(question == "Do you suppose they are attempting to hasten the return of antichrist", answer == "Not sure.")
     then
-        System.out.println("The New World Order");
+        insert(finalResult("The New World Order"));
     end
 
     rule "Question15"
@@ -466,21 +482,21 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Who are they blaming?", answer == "The Muslims")
     then
-        System.out.println("9/11");
+        insert(finalResult("9/11"));
     end
 
     rule "Question19"
     when
         answerQuestion : Answer(question == "Who are they blaming?", answer == "The Libyans")
     then
-        System.out.println("Pan Am Flight 103");
+        insert(finalResult("Pan Am Flight 103"));
     end
 
     rule "Question20"
     when
         answerQuestion : Answer(question == "Who are they blaming?", answer == "The Kids")
     then
-        System.out.println("Columbine");
+        insert(finalResult("Columbine"));
     end
 
     rule "Question21"
@@ -494,21 +510,21 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "What are they poisoning?", answer == "The Water")
     then
-        System.out.println("Fluoridation");
+        insert(finalResult("Fluoridation"));
     end
 
     rule "Question23"
     when
         answerQuestion : Answer(question == "What are they poisoning?", answer == "The Air")
     then
-        System.out.println("Chemtrails");
+        insert(finalResult("Chemtrails"));
     end
 
     rule "Question24"
     when
         answerQuestion : Answer(question == "What are they poisoning?", answer == "The Food")
     then
-        System.out.println("GM Crops");
+        insert(finalResult("GM Crops"));
     end
 
     rule "Question25"
@@ -529,21 +545,21 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Which One?", answer == "Obama")
     then
-        System.out.println("Birthers");
+        insert(finalResult("Birthers"));
     end
 
     rule "Question28"
     when
         answerQuestion : Answer(question == "Which One?", answer == "Kennedy")
     then
-        System.out.println("JFK Assassination");
+        insert(finalResult("JFK Assassination"));
     end
 
     rule "Question29"
     when
         answerQuestion : Answer(question == "Which One?", answer == "Clinton")
     then
-        System.out.println("Clinton Body Count");
+        insert(finalResult("Clinton Body Count"));
     end
 
     rule "Question30"
@@ -557,14 +573,14 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "What about it?", answer == "They're making shit up and telling it to us to frighten us.")
     then
-        System.out.println("Global Warming");
+        insert(finalResult("Global Warming"));
     end
 
     rule "Question32"
     when
         answerQuestion : Answer(question == "What about it?", answer == "They're doing frightening shit and not telling us.")
     then
-        System.out.println("HAARP");
+        insert(finalResult("HAARP"));
     end
 
     rule "Question33"
@@ -578,14 +594,14 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Could they perhaps be conducting secret trials to see which soft cream cheese goes best with salon and bagels?", answer == "Quite possibly.")
     then
-        System.out.println("Philadelphia Experiment");
+        insert(finalResult("Philadelphia Experiment"));
     end
 
     rule "Question35"
     when
         answerQuestion : Answer(question == "Could they perhaps be conducting secret trials to see which soft cream cheese goes best with salon and bagels?", answer == "Very unlikely.")
     then
-        System.out.println("Mauntauk Project");
+        insert(finalResult("Mauntauk Project"));
     end
 
     rule "Question36"
@@ -599,12 +615,264 @@ import javax.swing.JOptionPane
     when
         answerQuestion : Answer(question == "Is that camera looking at me?", answer == "Yes")
     then
-        System.out.println("Big Brother");
+        insert(finalResult("Big Brother"));
     end
 
     rule "Question38"
     when
         answerQuestion : Answer(question == "Is that camera looking at me?", answer == "No, it's just filming that pretend astronaut over there.")
     then
-        System.out.println("Moon Landing Hoax");
+        insert(finalResult("Moon Landing Hoax"));
+    end
+
+    rule "Question39"
+    when
+        answerQuestion : Answer(question == "Who do you suppose THEY are?", answer == "Aliens")
+    then
+        insert(checkForAnswer2(3, "Does Queen Elizabeth II bear an uncanny resemblance to a large shape shifting lizard from the Alpha Draconis star system?", "Actually, now you come to mention it, she kind of does a bit", "Don't be silly, she just has a very large selection of nice green frocks with matching hats"));
+    end
+
+    rule "Question40"
+    when
+        answerQuestion : Answer(question == "Does Queen Elizabeth II bear an uncanny resemblance to a large shape shifting lizard from the Alpha Draconis star system?", answer == "Actually, now you come to mention it, she kind of does a bit")
+    then
+        insert(finalResult("Reptilians"));
+    end
+
+    rule "Question41"
+    when
+        answerQuestion : Answer(question == "Does Queen Elizabeth II bear an uncanny resemblance to a large shape shifting lizard from the Alpha Draconis star system?", answer == "Don't be silly, she just has a very large selection of nice green frocks with matching hats")
+    then
+        insert(checkForAnswer7(4, "After a technologically advanced alien species has mastered interstellar space travel and invested vast time and effort into travelling to earth, who do you suppose they would be most likely to make first contact with?", "Cows", "A Credulous Hick", "The Chosen One", "The U.S. Army", "The Nazis", "Ancient civilisations", "No one"));
+    end
+
+    rule "Question42"
+    when
+        answerQuestion : Answer(question == "After a technologically advanced alien species has mastered interstellar space travel and invested vast time and effort into travelling to earth, who do you suppose they would be most likely to make first contact with?", answer == "Cows")
+    then
+        insert(finalResult("Cattle Mutilation"));
+    end
+
+    rule "Question43"
+    when
+        answerQuestion : Answer(question == "After a technologically advanced alien species has mastered interstellar space travel and invested vast time and effort into travelling to earth, who do you suppose they would be most likely to make first contact with?", answer == "A Credulous Hick")
+    then
+        insert(checkForAnswer2(5, "Have you ever fantasised about shiny dildos?", "A bit", "Certainly Not"));
+    end
+
+    rule "Question44"
+    when
+        answerQuestion : Answer(question == "Have you ever fantasised about shiny dildos?", answer == "A bit")
+    then
+        insert(finalResult("Alien abductions"));
+    end
+
+    rule "Question45"
+    when
+        answerQuestion : Answer(question == "Have you ever fantasised about shiny dildos?", answer == "Certainly Not")
+    then
+        insert(finalResult("Alien Visitations"));
+    end
+
+    rule "Question46"
+    when
+        answerQuestion : Answer(question == "After a technologically advanced alien species has mastered interstellar space travel and invested vast time and effort into travelling to earth, who do you suppose they would be most likely to make first contact with?", answer == "The Chosen One")
+    then
+        insert(checkForAnswer2(5, "Has The Chosen One ever been taken to the planet Elohim on a flying saucer to meet Jesus, Buddha and Joseph Smith?", "Yep. Pretty impressive eh?", "No, but she has written a very silly book"));
+    end
+
+    rule "Question47"
+    when
+        answerQuestion : Answer(question == "Has The Chosen One ever been taken to the planet Elohim on a flying saucer to meet Jesus, Buddha and Joseph Smith?", answer == "Yep. Pretty impressive eh?")
+    then
+        insert(finalResult("Raelian"));
+    end
+
+    rule "Question48"
+    when
+        answerQuestion : Answer(question == "Has The Chosen One ever been taken to the planet Elohim on a flying saucer to meet Jesus, Buddha and Joseph Smith?", answer == "No, but she has written a very silly book")
+    then
+        insert(finalResult("Pleiadians"));
+    end
+
+    rule "Question49"
+    when
+        answerQuestion : Answer(question == "After a technologically advanced alien species has mastered interstellar space travel and invested vast time and effort into travelling to earth, who do you suppose they would be most likely to make first contact with?", answer == "The U.S. Army")
+    then
+        insert(checkForAnswer2(5, "Do crashed alien spaceships look a little big like a knackered high altitude weather balloon?", "No, they're all nice and shiny and zip about the place", "There are some superficial similarities yes"));
+    end
+
+    rule "Question52"
+    when
+        answerQuestion : Answer(question == "Do crashed alien spaceships look a little big like a knackered high altitude weather balloon?", answer == "No, they're all nice and shiny and zip about the place")
+    then
+        insert(checkForAnswer2(6, "Do the aliens have permission from the U.S. army to buzz around the place in their nice shiny spaceships putting the willies up the locals?", "Yes", "No"));
+    end
+
+    rule "Question53"
+    when
+        answerQuestion : Answer(question == "Do the aliens have permission from the U.S. army to buzz around the place in their nice shiny spaceships putting the willies up the locals?", answer == "Yes")
+    then
+        insert(finalResult("Area 51"));
+    end
+
+    rule "Question54"
+    when
+        answerQuestion : Answer(question == "Do the aliens have permission from the U.S. army to buzz around the place in their nice shiny spaceships putting the willies up the locals?", answer == "No")
+    then
+        insert(finalResult("Dulce Base"));
+    end
+
+    rule "Question55"
+    when
+        answerQuestion : Answer(question == "Do crashed alien spaceships look a little big like a knackered high altitude weather balloon?", answer == "There are some superficial similarities yes")
+    then
+        insert(checkForAnswer2(6, "Anyone inside?", "Yes, a little grey bugger", "Yes, a little grey bugger, but we cut him up"));
+    end
+
+    rule "Question56"
+    when
+        answerQuestion : Answer(question == "Anyone inside?", answer == "Yes, a little grey bugger")
+    then
+        insert(finalResult("Roswell"));
+    end
+
+    rule "Question57"
+    when
+        answerQuestion : Answer(question == "Anyone inside?", answer == "Yes, a little grey bugger, but we cut him up")
+    then
+        insert(finalResult("Alien Autopsy"));
+    end
+
+    rule "Question50"
+    when
+        answerQuestion : Answer(question == "After a technologically advanced alien species has mastered interstellar space travel and invested vast time and effort into travelling to earth, who do you suppose they would be most likely to make first contact with?", answer == "The Nazis")
+    then
+        insert(finalResult("Hollow Earth"));
+    end
+
+    rule "Question51"
+    when
+        answerQuestion : Answer(question == "After a technologically advanced alien species has mastered interstellar space travel and invested vast time and effort into travelling to earth, who do you suppose they would be most likely to make first contact with?", answer == "Ancient civilisations")
+    then
+        insert(checkForAnswer2(5, "Which planet did they land on?", "Mars", "Earth"));
+    end
+
+    rule "Question58"
+    when
+        answerQuestion : Answer(question == "Which planet did they land on?", answer == "Mars")
+    then
+        insert(finalResult("The Face on Mars"));
+    end
+
+    rule "Question59"
+    when
+        answerQuestion : Answer(question == "Which planet did they land on?", answer == "Earth")
+    then
+        insert(finalResult("Ancient Astronauts"));
+    end
+
+    rule "Question60"
+    when
+        answerQuestion : Answer(question == "After a technologically advanced alien species has mastered interstellar space travel and invested vast time and effort into travelling to earth, who do you suppose they would be most likely to make first contact with?", answer == "No one")
+    then
+        insert(finalResult("Crop Circles"));
+    end
+
+    rule "Question61"
+    when
+        answerQuestion : Answer(question == "Big Pharma are evil because...", answer == "They use evil toxins")
+    then
+        insert(checkForAnswer2(4, "Example?", "Sweeteners", "Won't somebody think of the children"));
+    end
+
+    rule "Question62"
+    when
+        answerQuestion : Answer(question == "Example?", answer == "Sweeteners")
+    then
+        insert(finalResult("Aspartame"));
+    end
+
+    rule "Question63"
+    when
+        answerQuestion : Answer(question == "Example?", answer == "Won't somebody think of the children")
+    then
+        insert(finalResult("Vaccine Denial"));
+    end
+
+    rule "Question64"
+    when
+        answerQuestion : Answer(question == "Big Pharma are evil because...", answer == "Doctors tell you a crock of shit")
+    then
+        insert(checkForAnswer3(4, "What would be a better source of medical advice?", "Infomercials", "The Daily Mail", "Glossy Magazines"));
+    end
+
+    rule "Question65"
+    when
+        answerQuestion : Answer(question == "What would be a better source of medical advice?", answer == "Infomercials")
+    then
+        insert(finalResult("Kevin Trudeau"));
+    end
+
+    rule "Question66"
+    when
+        answerQuestion : Answer(question == "What would be a better source of medical advice?", answer == "The Daily Mail")
+    then
+        insert(finalResult("X Causes Cancer / X Cures Cancer"));
+    end
+
+    rule "Question67"
+    when
+        answerQuestion : Answer(question == "What would be a better source of medical advice?", answer == "Glossy Magazines")
+    then
+        insert(finalResult("WDDTY"));
+    end
+
+    rule "Question68"
+    when
+        answerQuestion : Answer(question == "Big Pharma are evil because...", answer == "They're trying to cover up natural remedies")
+    then
+        insert(checkForAnswer3(4, "What sort of natural remedies?", "Well, you can cure cancer with a large glass of carrot juice and a cup of coffee up your jacksie every day. Even Prince Charles knows that", "You can cure all known diseases by simply not cooking your food", "AIDS isn't caused by HIV and can be cured with beetroot and garlic"));
+    end
+
+    rule "Question69"
+    when
+        answerQuestion : Answer(question == "What sort of natural remedies?", answer == "Well, you can cure cancer with a large glass of carrot juice and a cup of coffee up your jacksie every day. Even Prince Charles knows that")
+    then
+        insert(finalResult("Gerson Therapy"));
+    end
+
+    rule "Question70"
+    when
+        answerQuestion : Answer(question == "What sort of natural remedies?", answer == "You can cure all known diseases by simply not cooking your food")
+    then
+        insert(finalResult("Raw Food Consiracy"));
+    end
+
+    rule "Question71"
+    when
+        answerQuestion : Answer(question == "What sort of natural remedies?", answer == "AIDS isn't caused by HIV and can be cured with beetroot and garlic")
+    then
+        insert(finalResult("HIV AIDS Denial"));
+    end
+
+    rule "Question72"
+    when
+        answerQuestion : Answer(question == "Big Pharma are evil because...", answer == "They're making up diseases to sell us more drugs")
+    then
+        insert(checkForAnswer2(4, "Sorry, what was that?", "Pay attention", "Pay attention and calm down"));
+    end
+
+    rule "Question73"
+    when
+        answerQuestion : Answer(question == "Sorry, what was that?", answer == "Pay attention")
+    then
+        insert(finalResult("ADD"));
+    end
+
+    rule "Question74"
+    when
+        answerQuestion : Answer(question == "Sorry, what was that?", answer == "Pay attention and calm down")
+    then
+        insert(finalResult("ADHD"));
     end
