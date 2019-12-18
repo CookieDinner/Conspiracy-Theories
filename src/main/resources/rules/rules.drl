@@ -369,3 +369,242 @@ import javax.swing.JOptionPane
     then
 //            insert(checkForAnswer(3, "Big pharma are evil because...", "They use toxins", "Doctors tell you a crock of shit"));
     end
+
+//    KRZYSIU
+    rule "Question5"
+    when
+        answerQuestion : Answer(question == "Who do you suppose THEY are?", answer == "THEM")
+    then
+        insert(checkForAnswer2(3, "What, the government?", "No man, I'm talking about some really scary secret underground shit.", "Yeah, those sneaky bastards are up to something."));
+    end
+
+    rule "Question6"
+    when
+        answerQuestion : Answer(question == "What, the government?", answer == "No man, I'm talking about some really scary secret underground shit.")
+    then
+        insert(checkForAnswer2(4, "What, like a sort of private annual conference for extremly influentioal politicians and businessmen?", "No, I mean the people who ACTUALLY rule the world.", "Exactly, but with a sort of sinister shadowy hand on the global tiller"));
+    end
+
+    rule "Question7"
+    when
+        answerQuestion : Answer(question == "What, like a sort of private annual conference for extremly influentioal politicians and businessmen?", answer == "Exactly, but with a sort of sinister shadowy hand on the global tiller")
+    then
+        insert(checkForAnswer2(5, "Sounds fun. Can I bring the wife?", "I suppose so.", "Certainly not."));
+    end
+
+    rule "Question8"
+    when
+        answerQuestion : Answer(question == "Sounds fun. Can I bring the wife?", answer == "I suppose so.")
+    then
+        System.out.println("Bilderberg Group");
+    end
+
+    rule "Question9"
+    when
+        answerQuestion : Answer(question == "Sounds fun. Can I bring the wife?", answer == "Certainly not.")
+    then
+        System.out.println("Bohemian Grove");
+    end
+
+    rule "Question10"
+    when
+        answerQuestion : Answer(question == "What, like a sort of private annual conference for extremly influentioal politicians and businessmen?", answer == "No, I mean the people who ACTUALLY rule the world.")
+    then
+        insert(checkForAnswer2(5, "Roundheads or Cavaliers?", "Roundhead.", "Cavalier."));
+    end
+
+    rule "Question11"
+    when
+        answerQuestion : Answer(question == "Roundheads or Cavaliers?", answer == "Roundhead.")
+    then
+        System.out.println("The Protocol of the Elders of Zion");
+    end
+
+    rule "Question12"
+    when
+        answerQuestion : Answer(question == "Roundheads or Cavaliers?", answer == "Cavalier.")
+    then
+        insert(checkForAnswer2(6, "Do you suppose they are attempting to hasten the return of antichrist", "Definitely", "Not sure."));
+    end
+
+    rule "Question13"
+    when
+        answerQuestion : Answer(question == "Do you suppose they are attempting to hasten the return of antichrist", answer == "Definitely")
+    then
+        System.out.println("The Illuminati");
+    end
+
+    rule "Question14"
+    when
+        answerQuestion : Answer(question == "Do you suppose they are attempting to hasten the return of antichrist", answer == "Not sure.")
+    then
+        System.out.println("The New World Order");
+    end
+
+    rule "Question15"
+    when
+        answerQuestion : Answer(question == "What, the government?", answer == "Yeah, those sneaky bastards are up to something.")
+    then
+        insert(checkForAnswer2(4, "Do you reckon they're trying to kill us?", "They're trying to wipe us out alright. No question.", "No, they're just fucking with stuff and not telling us about it, but I know what they're up to. They don't fool me."));
+    end
+
+    rule "Question16"
+    when
+        answerQuestion : Answer(question == "Do you reckon they're trying to kill us?", answer == "They're trying to wipe us out alright. No question.")
+    then
+        insert(checkForAnswer2(5, "How are they trying to kill us?", "They're killing us all the time and blaming it on someone else so we don't get suspicious, but I'm on to them", "Poison"));
+    end
+
+    rule "Question17"
+    when
+        answerQuestion : Answer(question == "How are they trying to kill us?", answer == "They're killing us all the time and blaming it on someone else so we don't get suspicious, but I'm on to them")
+    then
+        insert(checkForAnswer3(6, "Who are they blaming?", "The Muslims", "The Libyans", "The Kids"));
+    end
+
+    rule "Question18"
+    when
+        answerQuestion : Answer(question == "Who are they blaming?", answer == "The Muslims")
+    then
+        System.out.println("9/11");
+    end
+
+    rule "Question19"
+    when
+        answerQuestion : Answer(question == "Who are they blaming?", answer == "The Libyans")
+    then
+        System.out.println("Pan Am Flight 103");
+    end
+
+    rule "Question20"
+    when
+        answerQuestion : Answer(question == "Who are they blaming?", answer == "The Kids")
+    then
+        System.out.println("Columbine");
+    end
+
+    rule "Question21"
+    when
+        answerQuestion : Answer(question == "How are they trying to kill us?", answer == "Poison")
+    then
+        insert(checkForAnswer3(6, "What are they poisoning?", "The Water", "The Air", "The Food"));
+    end
+
+    rule "Question22"
+    when
+        answerQuestion : Answer(question == "What are they poisoning?", answer == "The Water")
+    then
+        System.out.println("Fluoridation");
+    end
+
+    rule "Question23"
+    when
+        answerQuestion : Answer(question == "What are they poisoning?", answer == "The Air")
+    then
+        System.out.println("Chemtrails");
+    end
+
+    rule "Question24"
+    when
+        answerQuestion : Answer(question == "What are they poisoning?", answer == "The Food")
+    then
+        System.out.println("GM Crops");
+    end
+
+    rule "Question25"
+    when
+        answerQuestion : Answer(question == "Do you reckon they're trying to kill us?", answer == "No, they're just fucking with stuff and not telling us about it, but I know what they're up to. They don't fool me.")
+    then
+        insert(checkForAnswer4(5, "What are they fucking with?", "The President", "The Weather", "Secret Weapons", "Our Minds"));
+    end
+
+    rule "Question26"
+    when
+        answerQuestion : Answer(question == "What are they fucking with?", answer == "The President")
+    then
+        insert(checkForAnswer3(6, "Which One?", "Obama", "Kennedy", "Clinton"));
+    end
+
+    rule "Question27"
+    when
+        answerQuestion : Answer(question == "Which One?", answer == "Obama")
+    then
+        System.out.println("Birthers");
+    end
+
+    rule "Question28"
+    when
+        answerQuestion : Answer(question == "Which One?", answer == "Kennedy")
+    then
+        System.out.println("JFK Assassination");
+    end
+
+    rule "Question29"
+    when
+        answerQuestion : Answer(question == "Which One?", answer == "Clinton")
+    then
+        System.out.println("Clinton Body Count");
+    end
+
+    rule "Question30"
+    when
+        answerQuestion : Answer(question == "What are they fucking with?", answer == "The Weather")
+    then
+        insert(checkForAnswer2(6, "What about it?", "They're making shit up and telling it to us to frighten us.", "They're doing frightening shit and not telling us."));
+    end
+
+    rule "Question31"
+    when
+        answerQuestion : Answer(question == "What about it?", answer == "They're making shit up and telling it to us to frighten us.")
+    then
+        System.out.println("Global Warming");
+    end
+
+    rule "Question32"
+    when
+        answerQuestion : Answer(question == "What about it?", answer == "They're doing frightening shit and not telling us.")
+    then
+        System.out.println("HAARP");
+    end
+
+    rule "Question33"
+    when
+        answerQuestion : Answer(question == "What are they fucking with?", answer == "Secret Weapons")
+    then
+        insert(checkForAnswer2(6, "Could they perhaps be conducting secret trials to see which soft cream cheese goes best with salon and bagels?", "Quite possibly.", "Very unlikely."));
+    end
+
+    rule "Question34"
+    when
+        answerQuestion : Answer(question == "Could they perhaps be conducting secret trials to see which soft cream cheese goes best with salon and bagels?", answer == "Quite possibly.")
+    then
+        System.out.println("Philadelphia Experiment");
+    end
+
+    rule "Question35"
+    when
+        answerQuestion : Answer(question == "Could they perhaps be conducting secret trials to see which soft cream cheese goes best with salon and bagels?", answer == "Very unlikely.")
+    then
+        System.out.println("Mauntauk Project");
+    end
+
+    rule "Question36"
+    when
+        answerQuestion : Answer(question == "What are they fucking with?", answer == "Our Minds")
+    then
+        insert(checkForAnswer2(6, "Is that camera looking at me?", "Yes", "No, it's just filming that pretend astronaut over there."));
+    end
+
+    rule "Question37"
+    when
+        answerQuestion : Answer(question == "Is that camera looking at me?", answer == "Yes")
+    then
+        System.out.println("Big Brother");
+    end
+
+    rule "Question38"
+    when
+        answerQuestion : Answer(question == "Is that camera looking at me?", answer == "No, it's just filming that pretend astronaut over there.")
+    then
+        System.out.println("Moon Landing Hoax");
+    end
