@@ -2,7 +2,7 @@
 An expert system project made with the help of JBoss Drools library.
 
 ## Jar
-https://github.com/CookieDinner/Conspiracy-Theories/releases
+[Latest version](https://github.com/CookieDinner/Conspiracy-Theories/releases)
 
 ## Rules
 
